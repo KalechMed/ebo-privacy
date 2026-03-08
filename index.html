@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung – EBO Jugendhilfe</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --brand:       #1a5c96;
+      --brand-light: #e8f1fb;
+      --text:        #1a1a2e;
+      --muted:       #555566;
+      --border:      #d0d8e4;
+      --bg:          #f7f9fc;
+      --white:       #ffffff;
+      --radius:      8px;
+      --max-width:   760px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--brand);
+      color: var(--white);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    header .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 14px;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: clamp(22px, 4vw, 30px);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    header .subtitle {
+      margin-top: 8px;
+      font-size: 15px;
+      opacity: 0.82;
+    }
+
+    header .badge {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 5px 14px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Main layout ── */
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    /* ── Meta bar ── */
+    .meta-bar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      font-size: 13.5px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .meta-bar span::before {
+      content: attr(data-icon) " ";
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--brand-light);
+      border: 1px solid #c2d8f0;
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 44px;
+    }
+
+    .toc h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--brand);
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--brand);
+      text-decoration: none;
+      font-size: 14.5px;
+    }
+
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── Sections ── */
+    section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+      margin-bottom: 24px;
+    }
+
+    section h2 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--brand-light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--brand);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    section h3 {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 22px 0 10px;
+    }
+
+    section p {
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    section ul, section ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+
+    section li {
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    /* ── Highlight box ── */
+    .highlight-box {
+      background: var(--brand-light);
+      border-left: 4px solid var(--brand);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin: 18px 0;
+      font-size: 14.5px;
+    }
+
+    /* ── Data table ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 16px 0;
+    }
+
+    .data-table th {
+      background: var(--brand);
+      color: var(--white);
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 600;
+    }
+
+    .data-table th:first-child { border-radius: 6px 0 0 0; }
+    .data-table th:last-child  { border-radius: 0 6px 0 0; }
+
+    .data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .data-table tr:nth-child(even) td {
+      background: var(--bg);
+    }
+
+    /* ── Rights grid ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .right-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+    }
+
+    .right-card .right-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--brand);
+      margin-bottom: 5px;
+    }
+
+    .right-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--brand-light);
+      border: 1px solid #c2d8f0;
+      border-radius: var(--radius);
+      padding: 22px 26px;
+    }
+
+    .contact-card .org-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 12px;
+    }
+
+    .contact-card .contact-line {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 7px;
+      font-size: 14.5px;
+    }
+
+    .contact-card .contact-icon {
+      width: 20px;
+      flex-shrink: 0;
+      text-align: center;
+      color: var(--brand);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      section { padding: 22px 18px; }
+      .toc    { padding: 18px 20px; }
+      .data-table { font-size: 13px; }
+      .data-table th, .data-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">EBO</div>
+  <h1>Datenschutzerklärung</h1>
+  <p class="subtitle">EBO Jugendhilfe – Mobile Anwendung</p>
+  <span class="badge">Kinder- und Jugendhilfe &nbsp;|&nbsp; Professionelle Fallverwaltung</span>
+</header>
+
+<main>
+
+  <div class="meta-bar">
+    <span data-icon="📅">Zuletzt aktualisiert: März 2026</span>
+    <span data-icon="🌐">Geltungsbereich: Deutschland (DSGVO)</span>
+    <span data-icon="📱">App-Version: 1.0</span>
+    <span data-icon="🔒">Datenspeicherung: Deutschland / EU</span>
+  </div>
+
+  <div class="toc">
+    <h2>Inhaltsverzeichnis</h2>
+    <ol>
+      <li><a href="#s1">Verantwortliche Stelle</a></li>
+      <li><a href="#s2">Geltungsbereich und Nutzerkreis</a></li>
+      <li><a href="#s3">Erhobene Daten und Zwecke</a></li>
+      <li><a href="#s4">Rechtsgrundlagen der Verarbeitung</a></li>
+      <li><a href="#s5">Speicherdauer</a></li>
+      <li><a href="#s6">Drittanbieter und Auftragsverarbeitung</a></li>
+      <li><a href="#s7">Push-Benachrichtigungen</a></li>
+      <li><a href="#s8">Datensicherheit</a></li>
+      <li><a href="#s9">Rechte der betroffenen Personen</a></li>
+      <li><a href="#s10">Änderungen dieser Datenschutzerklärung</a></li>
+      <li><a href="#s11">Kontakt und Beschwerderecht</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 ── Verantwortliche Stelle -->
+  <section id="s1">
+    <h2><span class="num">1</span> Verantwortliche Stelle</h2>
+    <p>
+      Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) sowie
+      sonstiger nationaler Datenschutzgesetze der Mitgliedsstaaten und anderer
+      datenschutzrechtlicher Bestimmungen ist:
+    </p>
+    <div class="contact-card">
+      <div class="org-name">EBO Jugendhilfe</div>
+      <div class="contact-line">
+        <span class="contact-icon">✉</span>
+        <span>datenschutz@ebo-jugendhilfe.de</span>
+      </div>
+      <div class="contact-line">
+        <span class="contact-icon">🌐</span>
+        <span>www.ebo-jugendhilfe.de</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 ── Geltungsbereich -->
+  <section id="s2">
+    <h2><span class="num">2</span> Geltungsbereich und Nutzerkreis</h2>
+    <p>
+      Diese Datenschutzerklärung gilt für die mobile Anwendung <strong>EBO Jugendhilfe</strong>
+      (nachfolgend „App"), die ausschließlich für den dienstlichen Einsatz durch
+      Mitarbeiterinnen und Mitarbeiter der EBO Jugendhilfe entwickelt wurde.
+    </p>
+
+    <div class="highlight-box">
+      <strong>Wichtiger Hinweis:</strong> Die App ist keine öffentlich zugängliche Anwendung.
+      Der Zugang erfolgt ausschließlich über Benutzerkonten, die durch die Administration
+      der EBO Jugendhilfe erstellt und verwaltet werden. Eine Selbstregistrierung ist nicht möglich.
+    </div>
+
+    <h3>Nutzerrollen</h3>
+    <ul>
+      <li><strong>Administrator:</strong> Vollständige Verwaltung der App, Nutzerverwaltung, Zugriff auf alle Daten.</li>
+      <li><strong>Fachkraft:</strong> Zugriff auf fallbezogene Daten im eigenen Zuständigkeitsbereich, Arbeitszeiterfassung, interne Kommunikation.</li>
+    </ul>
+  </section>
+
+  <!-- 3 ── Erhobene Daten -->
+  <section id="s3">
+    <h2><span class="num">3</span> Erhobene Daten und Zwecke</h2>
+    <p>
+      Im Rahmen der dienstlichen Nutzung der App werden die nachfolgend aufgeführten
+      Datenkategorien verarbeitet. Sämtliche Verarbeitungen dienen ausschließlich
+      legitimen beruflichen Zwecken der Kinder- und Jugendhilfe.
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Datenkategorie</th>
+          <th>Inhalt</th>
+          <th>Verarbeitungszweck</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Nutzerkontodaten</strong></td>
+          <td>Name, E-Mail-Adresse, Rolle (Admin / Fachkraft), Konto-Erstellungsdatum</td>
+          <td>Authentifizierung und Zugriffskontrolle</td>
+        </tr>
+        <tr>
+          <td><strong>Fallakten (Familien)</strong></td>
+          <td>Namen, Kontaktdaten, Fallbeschreibungen, Verlaufsnotizen, Hilfepläne</td>
+          <td>Fachliche Fallverwaltung und Dokumentation</td>
+        </tr>
+        <tr>
+          <td><strong>Arbeitszeiterfassung</strong></td>
+          <td>Arbeitsbeginn/-ende, Pausen, Tätigkeitsbeschreibungen</td>
+          <td>Arbeitszeitdokumentation gemäß gesetzlicher Anforderungen</td>
+        </tr>
+        <tr>
+          <td><strong>Interne Memos und Dokumente</strong></td>
+          <td>Textinhalte, Anhänge, Erstellungszeitstempel, Autorenzuweisung</td>
+          <td>Interne Kommunikation und Dokumentenverwaltung</td>
+        </tr>
+        <tr>
+          <td><strong>HPG-Termine (Hilfeplangespräche)</strong></td>
+          <td>Termindatum, -uhrzeit, zugeordnete Fachkraft, Fallbezug</td>
+          <td>Terminverwaltung und Erinnerungsbenachrichtigungen</td>
+        </tr>
+        <tr>
+          <td><strong>Technische Nutzungsdaten</strong></td>
+          <td>Gerätekennzeichnung (Push-Token), Anmeldezeitstempel, App-Fehlerlogs</td>
+          <td>Technischer Betrieb, Push-Benachrichtigungen, Fehlerdiagnose</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box">
+      Es werden keine Daten zu Werbezwecken erhoben oder verarbeitet. Es findet
+      keine automatisierte Entscheidungsfindung oder Profilerstellung im Sinne
+      von Art. 22 DSGVO statt.
+    </div>
+  </section>
+
+  <!-- 4 ── Rechtsgrundlagen -->
+  <section id="s4">
+    <h2><span class="num">4</span> Rechtsgrundlagen der Verarbeitung</h2>
+    <p>Die Verarbeitung personenbezogener Daten erfolgt auf folgenden Rechtsgrundlagen:</p>
+    <ul>
+      <li>
+        <strong>Art. 6 Abs. 1 lit. b DSGVO</strong> – Vertragserfüllung: Verarbeitung
+        von Beschäftigtendaten im Rahmen des Arbeitsverhältnisses.
+      </li>
+      <li>
+        <strong>Art. 6 Abs. 1 lit. c DSGVO</strong> – Rechtliche Verpflichtung: Einhaltung
+        gesetzlicher Dokumentationspflichten in der Kinder- und Jugendhilfe (SGB VIII),
+        Arbeitszeitgesetz (ArbZG).
+      </li>
+      <li>
+        <strong>Art. 6 Abs. 1 lit. e DSGVO</strong> – Öffentliches Interesse: Wahrnehmung
+        von Aufgaben der Kinder- und Jugendhilfe im öffentlichen Interesse.
+      </li>
+      <li>
+        <strong>Art. 9 Abs. 2 lit. h DSGVO</strong> – Verarbeitung besonderer
+        Kategorien für Zwecke der sozialen Fürsorge und sozialer Unterstützungsleistungen.
+      </li>
+      <li>
+        <strong>§ 26 BDSG</strong> – Verarbeitung von Beschäftigtendaten für Zwecke
+        des Beschäftigungsverhältnisses.
+      </li>
+    </ul>
+  </section>
+
+  <!-- 5 ── Speicherdauer -->
+  <section id="s5">
+    <h2><span class="num">5</span> Speicherdauer</h2>
+    <p>
+      Personenbezogene Daten werden nur so lange gespeichert, wie es für den jeweiligen
+      Verarbeitungszweck erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen.
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Datenkategorie</th>
+          <th>Speicherdauer</th>
+          <th>Grundlage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nutzerkontodaten</td>
+          <td>Dauer des Beschäftigungsverhältnisses + 3 Jahre</td>
+          <td>§ 26 BDSG, arbeitsrechtliche Fristen</td>
+        </tr>
+        <tr>
+          <td>Fallakten</td>
+          <td>10 Jahre nach Fallabschluss</td>
+          <td>§ 97 SGB VIII, fachliche Empfehlungen</td>
+        </tr>
+        <tr>
+          <td>Arbeitszeitdaten</td>
+          <td>2 Jahre</td>
+          <td>§ 16 ArbZG</td>
+        </tr>
+        <tr>
+          <td>Interne Dokumente / Memos</td>
+          <td>6 Jahre</td>
+          <td>§ 257 HGB (analog)</td>
+        </tr>
+        <tr>
+          <td>HPG-Termine</td>
+          <td>Bis zur Falllöschung, max. 10 Jahre</td>
+          <td>Fachliche Notwendigkeit</td>
+        </tr>
+        <tr>
+          <td>Push-Token</td>
+          <td>Bis zur Abmeldung / Kontolöschung</td>
+          <td>Technische Notwendigkeit</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Nach Ablauf der jeweiligen Aufbewahrungsfrist werden die Daten routinemäßig
+      und sicher gelöscht, sofern keine darüberhinausgehenden gesetzlichen Aufbewahrungspflichten bestehen.
+    </p>
+  </section>
+
+  <!-- 6 ── Drittanbieter -->
+  <section id="s6">
+    <h2><span class="num">6</span> Drittanbieter und Auftragsverarbeitung</h2>
+    <p>
+      Die App nutzt Dienste von Google LLC als Auftragsverarbeiter gemäß Art. 28 DSGVO.
+      Es besteht ein entsprechender Auftragsverarbeitungsvertrag (AVV). Eine Weitergabe
+      von Daten an sonstige Dritte zu deren eigenen Zwecken findet nicht statt.
+    </p>
+
+    <h3>Firebase / Google Cloud Platform</h3>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Dienst</th>
+          <th>Zweck</th>
+          <th>Datenstandort</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Firebase Authentication</strong></td>
+          <td>Nutzerauthentifizierung (E-Mail/Passwort)</td>
+          <td>Google Cloud – Region europe-west (EU/Deutschland)</td>
+        </tr>
+        <tr>
+          <td><strong>Cloud Firestore</strong></td>
+          <td>Speicherung aller App-Daten (Fallakten, Dokumente, Termine etc.)</td>
+          <td>Google Cloud – Region europe-west (EU/Deutschland)</td>
+        </tr>
+        <tr>
+          <td><strong>Firebase Storage</strong></td>
+          <td>Speicherung von Dateianhängen und Dokumenten</td>
+          <td>Google Cloud – Region europe-west (EU/Deutschland)</td>
+        </tr>
+        <tr>
+          <td><strong>Firebase Cloud Messaging (FCM)</strong></td>
+          <td>Versand von Push-Benachrichtigungen</td>
+          <td>Google-Server (weltweit); nur technische Kennungen übertragen</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Weitere Informationen zum Datenschutz bei Google / Firebase finden Sie unter:
+      <br>
+      <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">
+        https://firebase.google.com/support/privacy
+      </a>
+    </p>
+
+    <div class="highlight-box">
+      Es findet keine Weitergabe personenbezogener Daten an Werbenetzwerke, Analyseunternehmen
+      oder sonstige Dritte statt. Die App enthält keine Tracking- oder Analyse-SDKs.
+    </div>
+  </section>
+
+  <!-- 7 ── Push-Benachrichtigungen -->
+  <section id="s7">
+    <h2><span class="num">7</span> Push-Benachrichtigungen</h2>
+    <p>
+      Die App sendet Push-Benachrichtigungen ausschließlich zu dienstlichen Zwecken.
+      Die Nutzerin bzw. der Nutzer kann Push-Benachrichtigungen in den Geräteeinstellungen
+      jederzeit deaktivieren.
+    </p>
+
+    <h3>Verwendete Push-Dienste</h3>
+    <ul>
+      <li>
+        <strong>Apple Push Notification Service (APNs)</strong> – für iOS-Geräte.
+        Dabei wird ein gerätespezifisches Push-Token von Apple generiert und
+        an die App übermittelt. Dieses Token wird in Firebase Cloud Messaging
+        registriert, um Benachrichtigungen zustellen zu können.
+      </li>
+      <li>
+        <strong>Firebase Cloud Messaging (FCM)</strong> – Verwaltung und Versand
+        von Push-Benachrichtigungen an registrierte Geräte.
+      </li>
+    </ul>
+
+    <h3>Art der Benachrichtigungen</h3>
+    <ul>
+      <li>Erinnerungen an anstehende Hilfeplangespräche (HPG-Termine)</li>
+      <li>Systembenachrichtigungen der EBO Jugendhilfe-Administration</li>
+    </ul>
+
+    <p>
+      Beim Versand von Push-Benachrichtigungen werden lediglich technische Kennungen
+      (Push-Token, Benutzer-ID) verarbeitet. Inhaltliche Falldaten werden nicht
+      im Benachrichtigungs-Payload übertragen.
+    </p>
+  </section>
+
+  <!-- 8 ── Datensicherheit -->
+  <section id="s8">
+    <h2><span class="num">8</span> Datensicherheit</h2>
+    <p>
+      Wir setzen technische und organisatorische Maßnahmen (TOMs) ein, um die
+      verarbeiteten personenbezogenen Daten gegen zufällige oder vorsätzliche
+      Manipulation, Verlust, Zerstörung und den Zugriff unberechtigter Personen
+      zu schützen:
+    </p>
+    <ul>
+      <li>Verschlüsselte Datenübertragung (TLS 1.2+)</li>
+      <li>Verschlüsselung der gespeicherten Daten (Firebase at-rest encryption, AES-256)</li>
+      <li>Rollenbasierte Zugriffskontrolle (RBAC) über Firebase Security Rules</li>
+      <li>Authentifizierung mit sicherem Passwort-Hashing (Firebase Authentication)</li>
+      <li>Konten werden ausschließlich durch Administratoren erstellt – keine Selbstregistrierung</li>
+      <li>Regelmäßige Sicherheitsüberprüfung der Firestore Security Rules</li>
+    </ul>
+  </section>
+
+  <!-- 9 ── Rechte -->
+  <section id="s9">
+    <h2><span class="num">9</span> Rechte der betroffenen Personen</h2>
+    <p>
+      Als betroffene Person stehen Ihnen gegenüber dem Verantwortlichen folgende
+      Rechte nach der DSGVO zu:
+    </p>
+
+    <div class="rights-grid">
+      <div class="right-card">
+        <div class="right-title">Auskunft (Art. 15)</div>
+        <p>Recht auf Auskunft über die zu Ihrer Person gespeicherten Daten.</p>
+      </div>
+      <div class="right-card">
+        <div class="right-title">Berichtigung (Art. 16)</div>
+        <p>Recht auf Korrektur unrichtiger oder unvollständiger Daten.</p>
+      </div>
+      <div class="right-card">
+        <div class="right-title">Löschung (Art. 17)</div>
+        <p>Recht auf Löschung Ihrer Daten, sofern keine Aufbewahrungspflicht besteht.</p>
+      </div>
+      <div class="right-card">
+        <div class="right-title">Einschränkung (Art. 18)</div>
+        <p>Recht auf Einschränkung der Verarbeitung unter bestimmten Voraussetzungen.</p>
+      </div>
+      <div class="right-card">
+        <div class="right-title">Datenportabilität (Art. 20)</div>
+        <p>Recht auf Herausgabe Ihrer Daten in einem strukturierten, maschinenlesbaren Format.</p>
+      </div>
+      <div class="right-card">
+        <div class="right-title">Widerspruch (Art. 21)</div>
+        <p>Recht auf Widerspruch gegen die Verarbeitung auf Basis von Art. 6 Abs. 1 lit. e DSGVO.</p>
+      </div>
+    </div>
+
+    <p>
+      Zur Geltendmachung Ihrer Rechte wenden Sie sich bitte an die unter
+      <a href="#s11">Abschnitt 11</a> angegebene Kontaktadresse.
+    </p>
+
+    <h3>Beschwerderecht bei der Aufsichtsbehörde</h3>
+    <p>
+      Sie haben das Recht, sich bei der zuständigen Datenschutz-Aufsichtsbehörde
+      zu beschweren. Die zuständige Aufsichtsbehörde richtet sich nach dem Bundesland,
+      in dem die EBO Jugendhilfe ihren Sitz hat. Eine Übersicht aller deutschen
+      Datenschutzaufsichtsbehörden finden Sie unter:
+      <br>
+      <a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
+         target="_blank" rel="noopener">
+        www.bfdi.bund.de
+      </a>
+    </p>
+  </section>
+
+  <!-- 10 ── Änderungen -->
+  <section id="s10">
+    <h2><span class="num">10</span> Änderungen dieser Datenschutzerklärung</h2>
+    <p>
+      Wir behalten uns vor, diese Datenschutzerklärung anzupassen, soweit dies
+      aufgrund von Änderungen der rechtlichen Anforderungen, technischer Neuerungen
+      oder organisatorischer Umstrukturierungen erforderlich wird.
+    </p>
+    <p>
+      Die jeweils aktuelle Version der Datenschutzerklärung ist jederzeit über
+      den in der App hinterlegten Link abrufbar. Bei wesentlichen Änderungen
+      werden Nutzerinnen und Nutzer gesondert informiert.
+    </p>
+    <p>
+      <strong>Aktuelle Version:</strong> März 2026
+    </p>
+  </section>
+
+  <!-- 11 ── Kontakt -->
+  <section id="s11">
+    <h2><span class="num">11</span> Kontakt und Beschwerderecht</h2>
+    <p>
+      Für Fragen zum Datenschutz, zur Geltendmachung Ihrer Rechte oder für
+      sonstige datenschutzrechtliche Anliegen wenden Sie sich bitte an:
+    </p>
+    <div class="contact-card">
+      <div class="org-name">EBO Jugendhilfe – Datenschutzbeauftragter / Verantwortliche Stelle</div>
+      <div class="contact-line">
+        <span class="contact-icon">✉</span>
+        <span>datenschutz@ebo-jugendhilfe.de</span>
+      </div>
+      <div class="contact-line">
+        <span class="contact-icon">🌐</span>
+        <span>www.ebo-jugendhilfe.de</span>
+      </div>
+    </div>
+    <p style="margin-top: 16px;">
+      Wir bearbeiten Ihr Anliegen schnellstmöglich und spätestens innerhalb
+      von <strong>30 Tagen</strong> gemäß Art. 12 Abs. 3 DSGVO.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    &copy; 2026 EBO Jugendhilfe &nbsp;&middot;&nbsp;
+    Datenschutzerklärung Version 1.0, März 2026
+  </p>
+  <p style="margin-top: 6px;">
+    Diese Datenschutzerklärung gilt für die mobile App <em>EBO Jugendhilfe</em>
+    und entspricht den Anforderungen der DSGVO (EU 2016/679) sowie des BDSG.
+  </p>
+</footer>
+
+</body>
+</html>
